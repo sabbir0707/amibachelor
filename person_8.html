@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ami Bachelor|calculation 8 person</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+   <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri" rel="stylesheet">
+     <meta charset="UTF-8">
+  <meta name="description" content="A place where you can calculate your house rent and other stuff,specially for bachelor people.This is amibachelor.">
+  <meta name="author" content="amibacelor">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript">
+console.log('%c So you are here,ok. This is really a simple project,made by a young programmer.If you want to help, please contact. Thanks.', 'color: red; font-weight: bold; font-size:20px;');
+</script>
+<style type="text/css">
+    table{ visibility:hidden; border: .0002px solid black; border-collapse: collapse;
+    width: 100%;}
+   .show {
+   visibility: visible;}
+    th, td {
+    padding: 1px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+   </style>
+   <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-96200328-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<input type="button" class="printbutton" value="Save this data" id="pagePrint" onclick="print();">
+<body class="body">
+<a href=""><img class="logo" src="logo.png" alt="amibacelor logo"></a>
+<header class="mainHeader">
+    <nav><ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="active"><a href="selection.html">Calculation</a></li>
+        <li><a href="help.html">Help & Support</a></li>
+    </ul></nav>
+</header>
+<body>
+<div class="div"></div>
+<form class="form">
+
+    <p>Please enter name and related information to calculate.</p>
+
+    <input type="text" id="name1" placeholder="Name"> <input type="number" id="foodMon1" placeholder="Given For Food"> <input type="number" id="mea1" placeholder="Meal"> <input type="number" id="actualhouser1" placeholder="Actual house rent"> <input type="number" id="houser1" placeholder="House Rent given"> <br></br>
+
+    <input type="text" id="name2" placeholder="Name"> <input type="number" id="foodMon2" placeholder="Given For Food"> <input type="number" id="mea2" placeholder="Meal"> <input type="number" id="actualhouser2" placeholder="Actual house rent"> <input type="number" id="houser2" placeholder="House Rent given"> <br></br>
+
+    <input type="text" id="name3" placeholder="Name"> <input type="number" id="foodMon3" placeholder="Given For Food"> <input type="number" id="mea3" placeholder="Meal"> <input type="number" id="actualhouser3" placeholder="Actual house rent"> <input type="number" id="houser3" placeholder="House Rent given"> <br></br>
+
+    <input type="text" id="name4" placeholder="Name"> <input type="number" id="foodMon4" placeholder="Given For Food"> <input type="number" id="mea4" placeholder="Meal"> <input type="number" id="actualhouser4" placeholder="Actual house rent"> <input type="number" id="houser4" placeholder="House Rent given"> <br></br>
+
+    <input type="text" id="name5" placeholder="Name"> <input type="number" id="foodMon5" placeholder="Given For Food"> <input type="number" id="mea5" placeholder="Meal"> <input type="number" id="actualhouser5" placeholder="Actual house rent"> <input type="number" id="houser5" placeholder="House Rent given"> <br></br>
+
+    <input type="text" id="name6" placeholder="Name"> <input type="number" id="foodMon6" placeholder="Given For Food"> <input type="number" id="mea6" placeholder="Meal"> <input type="number" id="actualhouser6" placeholder="Actual house rent"> <input type="number" id="houser6" placeholder="House Rent given"> <br></br>
+
+    <input type="text" id="name7" placeholder="Name"> <input type="number" id="foodMon7" placeholder="Given For Food"> <input type="number" id="mea7" placeholder="Meal"> <input type="number" id="actualhouser7" placeholder="Actual house rent"> <input type="number" id="houser7" placeholder="House Rent given"> <br></br>
+
+    <input type="text" id="name8" placeholder="Name"> <input type="number" id="foodMon8" placeholder="Given For Food"> <input type="number" id="mea8" placeholder="Meal"> <input type="number" id="actualhouser8" placeholder="Actual house rent"> <input type="number" id="houser8" placeholder="House Rent given"> <br></br>
+
+    <input type="button" class="button" value="Submit" onclick="take_input();">
+ </form>
+  <p id="main">
+         <p id="printing_pera"></p>
+         <p id="printing_pera1"></p>
+         <p id="printing_pera2"></p>
+         <p id="printing_pera3"></p>
+         <p id="printing_pera4"></p>
+         <p id="printing_pera5"></p>
+  <table class="table">
+
+      <tr><th>Name.</th><th>For meal.</th><th>Meal no.</th><th>Meal Cost.</th><th>Meal money (Calc).</th><th>House Rent.</th><th>House rent given.</th><th>House rent (calc).</th><th>Final cost.</th></tr>
+
+    <tr><td><p id="bname1"></td><td><p id="bfoodMoney1"></td><td><p id="bmeal1"></td><td><p id="bperson1TotalMealCost"></td><td><p id="bperson1GiveTake"></td> <td><p id="bmainhouserent1"> </td> <td><p id="bPerson1HouseRent"></td><td><p id="bpayablefromhouser1"><p></td>
+    <td><p id="bPerson1FinalCalc"></p></td></tr>
+
+    <tr><td><p id="bname2"></td><td><p id="bfoodMoney2"></td><td><p id="bmeal2"></td><td><p id="bperson2TotalMealCost"></td><td><p id="bperson2GiveTake"></td> <td><p id="bmainhouserent2"></p></td> <td><p id="bPerson2HouseRent"></td><td><p id="bpayablefromhouser2"><p></td>
+    <td><p id="bPerson2FinalCalc"></p></td></tr>
+
+    <tr><td><p id="bname3"></td><td><p id="bfoodMoney3"></td><td><p id="bmeal3"></td><td><p id="bperson3TotalMealCost"></td><td><p id="bperson3GiveTake"></td> <td><p id="bmainhouserent3"> </td><td><p id="bPerson3HouseRent"></td><td><p id="bpayablefromhouser3"><p></td>
+    <td><p id="bPerson3FinalCalc"></p></td></tr>
+
+    <tr><td><p id="bname4"></td><td><p id="bfoodMoney4"></td><td><p id="bmeal4"></td><td><p id="bperson4TotalMealCost"></td><td><p id="bperson4GiveTake"></td> <td><p id="bmainhouserent4"> </td><td><p id="bPerson4HouseRent"></td><td><p id="bpayablefromhouser4"><p></td>
+    <td><p id="bPerson4FinalCalc"></p></td></tr>
+
+    <tr><td><p id="bname5"></td><td><p id="bfoodMoney5"></td><td><p id="bmeal5"></td><td><p id="bperson5TotalMealCost"></td><td><p id="bperson5GiveTake"></td> <td><p id="bmainhouserent5"> </td><td><p id="bPerson5HouseRent"></td><td><p id="bpayablefromhouser5"><p></td>
+    <td><p id="bPerson5FinalCalc"></p></td></tr>
+
+    <tr><td><p id="bname6"></td><td><p id="bfoodMoney6"></td><td><p id="bmeal6"></td><td><p id="bperson6TotalMealCost"></td><td><p id="bperson6GiveTake"></td> <td><p id="bmainhouserent6"> </td><td><p id="bPerson6HouseRent"></td><td><p id="bpayablefromhouser6"><p></td>
+    <td><p id="bPerson6FinalCalc"></p></td></tr>
+
+    <tr><td><p id="bname7"></td><td><p id="bfoodMoney7"></td><td><p id="bmeal7"></td><td><p id="bperson7TotalMealCost"></td><td><p id="bperson7GiveTake"></td> <td><p id="bmainhouserent7"> </td><td><p id="bPerson7HouseRent"></td><td><p id="bpayablefromhouser7"><p></td>
+    <td><p id="bPerson7FinalCalc"></p></td></tr>
+
+    <tr><td><p id="bname8"></td><td><p id="bfoodMoney8"></td><td><p id="bmeal8"></td><td><p id="bperson8TotalMealCost"></td><td><p id="bperson8GiveTake"></td> <td><p id="bmainhouserent8"> </td><td><p id="bPerson8HouseRent"></td><td><p id="bpayablefromhouser8"><p></td>
+    <td><p id="bPerson8FinalCalc"></p></td></tr>
+    
+</table>
+</p>
+<div class="devide"></div>
+<div class="footer"><footer>
+<nav class="makemiddlefooter">
+<nav class="footdec1">
+        <ul>
+<li><a class="afooter" href="help.html#babohar">ব্যবহার বিধি</a></li>
+        <li><a class="afooter" href="help.html#jogajog">যোগাযোগ</a></li>
+        <li><a class="afooter" href="help.html#somossa">সমস্যা মনে হল</a></li>
+        </ul>
+    </nav>
+<nav class="footdec2">
+        <ul>
+        <li><a class="afooter"href="about.html">amibachelor.com সম্পর্কে</a></li>
+        <li><a class="afooter"href="privacy.html">গোপনীয়তা ।</a><a class="afooter"href="terms.html"> নীতিমালা</a></li>
+        <li><a class="afooter"href="sitemap.html">সাইটম্যাপ</a></li>
+        </ul>
+    </nav>
+<nav class="footdec3">
+        <ul>
+        <li><a>সামাজিক যোগাযোগ মাধ্যম</a></li>
+        <a target="blank" href="https://www.fb.me/amibachelor"><img class="fblogo" src="logofb.png" alt="amibacelor fb logo"></a>
+        </ul>
+</footer></div>
+<script type="text/javascript">
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('23 2u(){1 11=4.5(\'11\').6;1 U=4.5(\'U\').6;1 10=4.5(\'10\').6;1 z=4.5(\'z\').6;1 H=4.5(\'H\').6;1 1c=4.5(\'1c\').6;1 1b=4.5(\'1b\').6;1 1d=4.5(\'1d\').6;b(11==""||U==""||10==""||z==""||H==""||1c==""||1b==""||1d==""){d("2n w 9 y");c}1 t=(4.5("2A").6);1 j=(4.5("2j").6);1 g=(4.5("2w").6);1 m=(4.5("2y").6);1 r=(4.5("2i").6);1 n=(4.5("2h").6);1 l=(4.5("2U").6);1 k=(4.5("2O").6);b(t==""||j==""||g==""||m==""||r==""||n==""||l==""||k==""){d("1W: w 9 y");c}b(t<0||j<0||g<0||m<0||r<0||n<0||l<0||k<0){d("1W: w 9 25 1a..");c}1 u=(4.5("2P").6);1 i=(4.5("2T").6);1 s=(4.5("2R").6);1 f=(4.5("2D").6);1 o=(4.5("2F").6);1 p=(4.5("2H").6);1 h=(4.5("2J").6);1 q=(4.5("2G").6);b(u==""||i==""||s==""||f==""||f==""||o==""||p==""||h==""||q==""){d("2B: w 9 y");c}b(u<0||i<0||s<0||f<0||o<0||p<0||h<0||q<0){d("2C: w 9 25 1a.");c}1 B=(4.5("2E").6);1 E=(4.5("2K").6);1 D=(4.5("2L").6);1 M=(4.5("2S").6);1 Q=(4.5("2Q").6);1 12=(4.5("2M").6);1 18=(4.5("2N").6);1 17=(4.5("2v").6);b(B==""||E==""||D==""||M==""||Q==""||12==""||18==""||17==""){d("N e: P 9 y.");c}b(B<0||E<0||D<0||M<0||Q<0||12<0||18<0||17<0){d("N e: P 9 1a.");c}1 13=(4.5("2m").6);1 W=(4.5("2l").6);1 R=(4.5("2q").6);1 14=(4.5("2I").6);1 C=(4.5("2z").6);1 O=(4.5("2t").6);1 I=(4.5("2x").6);1 J=(4.5("2o").6);b(13==""||W==""||R==""||14==""||C==""||O==""||I==""||J==""){d("N e: P 9 y.");c}b(13<0||W<0||R<0||14<0||C<0||O<0||I<0||J<0){d("N e: P 9 1a.");c}1 26=7(t);1 2b=7(j);1 2g=7(g);1 2f=7(m);1 2e=7(r);1 2a=7(n);1 1M=7(l);1 1N=7(k);1 1P=7(u);1 1K=7(i);1 1I=7(s);1 1R=7(f);1 20=7(o);1 22=7(p);1 1S=7(h);1 1U=7(q);1 X=7(B);1 S=7(E);1 15=7(D);1 G=7(M);1 16=7(Q);1 1g=7(12);1 1l=7(18);1 1h=7(17);1 1A=26+2b+2g+2f+2e+2a+1M+1N;1 1E=1P+1K+1I+1R+20+22+1S+1U;1 a=1A/1E;1 1Z=X+S+15+G+16+1g+1l+1h;1 1y=a*u;1 1o=a*i;1 1x=a*s;1 1r=a*f;1 1z=a*o;1 1F=a*p;1 1t=a*h;1 1q=a*q;1 1s=1y-t;1 1p=1o-j;1 1v=1x-g;1 1D=1r-m;1 1C=1z-r;1 1w=1F-n;1 1u=1t-l;1 1H=1q-k;1 V=7(13);1 Z=7(W);1 A=7(R);1 K=7(14);1 1j=7(C);1 1e=7(O);1 1n=7(I);1 F=7(J);1 Y=V-X;1 T=Z-S;1 19=A-15;1 L=K-G;1 1k=1j-16;1 1f=1e-1g;1 1m=1n-1l;1 1i=F-1h;1 1X=Y+1s;1 1V=T+1p;1 2c=19+1v;1 29=L+1D;1 2d=1k+1C;1 27=1f+1w;1 24=1m+1u;1 1T=1i+1H;1 1J=V+Z+A+K+1j+1e+1n+F;1 1Y=Y+T+19+L+1k+1f+1m+1i;2r.3="x 2s 1L: "+1A+" v";2k.3="x 1O 2p: "+1E+".";3B.3="3R 1O 1L 3Q 3P 3O: "+a.8(2)+" v";3S.3="x 1G e: "+1J+" v";3T.3="x 1G e 21: "+1Z+" v";3W.3="x 1G e 3V 9 21 "+1Y+" v";3U.3=11;3N.3=t;3M.3=u;3G.3=1y.8(2);3F.3=1s.8(2);3E.3=X;3D.3=1X.8(2);3H.3=Y;3I.3=V;3L.3=U;3K.3=j;3J.3=i;2V.3=1o.8(2);3X.3=1p.8(2);3Y.3=S;4c.3=1V.8(2);4b.3=T;4a.3=Z;4d.3=10;4e.3=g;4h.3=s;4g.3=1x.8(2);4f.3=1v.8(2);49.3=15;48.3=2c.8(2);42.3=19;41.3=A;40.3=z;3Z.3=m;43.3=f;44.3=1r.8(2);47.3=1D.8(2);46.3=G;45.3=29.8(2);3C.3=L;3a.3=K;39.3=H;38.3=r;37.3=o;3b.3=1z.8(2);3c.3=1C.8(2);3f.3=16;3e.3=2d.8(2);3d.3=1k;36.3=1j;35.3=1c;2Z.3=n;2Y.3=p;2X.3=1F.8(2);2W.3=1w.8(2);30.3=1g;31.3=27.8(2);34.3=1f;33.3=1e;32.3=1b;3g.3=l;3h.3=h;3v.3=1t.8(2);3u.3=1u.8(2);3t.3=1l;3w.3=24.8(2);3x.3=1m;3A.3=1n;3z.3=1d;3y.3=k;3s.3=q;3r.3=1q.8(2);3l.3=1H.8(2);3k.3=1h;3j.3=1T.8(2);3m.3=1i;3n.3=F;1 1B=4.28(\'1B\');1B.3q();4.28(\'.3p\').3o=\'4i\';23 1Q(){3i.1Q()}}',62,267,'|var||innerHTML|document|getElementById|value|parseFloat|toFixed|be|mealCost|if|return|alert|rent|meal4|foodMoney3|meal7|meal2|foodMoney2|foodMoney8|foodMoney7|foodMoney4|foodMoney6|meal5|meal6|meal8|foodMoney5|meal3|foodMoney1|meal1|tk|cannot|Total|blank|name4|mainhouserent3|houseRent1|actualhouserent5|houseRent3|houseRent2|mainhouserent8|houseRent4con|name5|actualhouserent7|actualhouserent8|mainhouserent4|payablefromhouser4|houseRent4|House|actualhouserent6|Cannot|houseRent5|actualhouserent3|houseRent2con|payablefromhouser2|name2|mainhouserent1|actualhouserent2|houseRent1con|payablefromhouser1|mainhouserent2|name3|name1|houseRent6|actualhouserent1|actualhouserent4|houseRent3con|houseRent5con|houseRent8|houseRent7|payablefromhouser3|minus|name7|name6|name8|mainhouserent6|payablefromhouser6|houseRent6con|houseRent8con|payablefromhouser8|mainhouserent5|payablefromhouser5|houseRent7con|payablefromhouser7|mainhouserent7|person2TotalMealCost|person2GiveTake|person8TotalMealCost|person4TotalMealCost|person1GiveTake|person7TotalMealCost|person7GiveTake|person3GiveTake|person6GiveTake|person3TotalMealCost|person1TotalMealCost|person5TotalMealCost|totalBazarCost|form|person5GiveTake|person4GiveTake|totalMealEaten|person6TotalMealCost|house|person8GiveTake|meal3con|houseRent|meal2con|cost|foodMoneyCon7|foodMoneyCon8|meal|meal1con|print|meal4con|meal7con|final8|meal8con|final2|Money|final1|totalPayablefromHouserent|houseRentCollected|meal5con|collected|meal6con|function|final7|in|foodMoneyCon1|final6|querySelector|final4|foodMoneyCon6|foodMoneyCon2|final3|final5|foodMoneyCon5|foodMoneyCon4|foodMoneyCon3|foodMon6|foodMon5|foodMon2|printing_pera1|actualhouser2|actualhouser1|Name|actualhouser8|no|actualhouser3|printing_pera|bazar|actualhouser6|take_input|houser8|foodMon3|actualhouser7|foodMon4|actualhouser5|foodMon1|Meal|Food|mea4|houser1|mea5|mea8|mea6|actualhouser4|mea7|houser2|houser3|houser6|houser7|foodMon8|mea1|houser5|mea3|houser4|mea2|foodMon7|bperson2TotalMealCost|bperson6GiveTake|bperson6TotalMealCost|bmeal6|bfoodMoney6|bPerson6HouseRent|bPerson6FinalCalc|bname7|bmainhouserent6|bpayablefromhouser6|bname6|bmainhouserent5|bmeal5|bfoodMoney5|bname5|bmainhouserent4|bperson5TotalMealCost|bperson5GiveTake|bpayablefromhouser5|bPerson5FinalCalc|bPerson5HouseRent|bfoodMoney7|bmeal7|window|bPerson8FinalCalc|bPerson8HouseRent|bperson8GiveTake|bpayablefromhouser8|bmainhouserent8|className|table|remove|bperson8TotalMealCost|bmeal8|bPerson7HouseRent|bperson7GiveTake|bperson7TotalMealCost|bPerson7FinalCalc|bpayablefromhouser7|bfoodMoney8|bname8|bmainhouserent7|printing_pera2|bpayablefromhouser4|bPerson1FinalCalc|bPerson1HouseRent|bperson1GiveTake|bperson1TotalMealCost|bpayablefromhouser1|bmainhouserent1|bmeal2|bfoodMoney2|bname2|bmeal1|bfoodMoney1|month|this|for|Per|printing_pera3|printing_pera4|bname1|will|printing_pera5|bperson2GiveTake|bPerson2HouseRent|bfoodMoney4|bname4|bmainhouserent3|bpayablefromhouser3|bmeal4|bperson4TotalMealCost|bPerson4FinalCalc|bPerson4HouseRent|bperson4GiveTake|bPerson3FinalCalc|bPerson3HouseRent|bmainhouserent2|bpayablefromhouser2|bPerson2FinalCalc|bname3|bfoodMoney3|bperson3GiveTake|bperson3TotalMealCost|bmeal3|show'.split('|'),0,{}))
+</script>
+</body>
+</html>

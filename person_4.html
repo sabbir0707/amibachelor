@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ami Bachelor|calculation 4 person</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+   <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri" rel="stylesheet">
+     <meta charset="UTF-8">
+  <meta name="description" content="A place where you can calculate your house rent and other stuff,specially for bachelor people.This is amibachelor.">
+  <meta name="author" content="amibacelor">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript">
+console.log('%c So you are here,ok. This is really a simple project,made by a young programmer.If you want to help, please contact. Thanks.', 'color: red; font-weight: bold; font-size:20px;');
+</script>
+<style type="text/css">
+    table{ visibility:hidden; border: .0002px solid black; border-collapse: collapse;
+    width: 100%;}
+   .show {
+   visibility: visible;}
+    th, td {
+    padding: 1px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+   </style>
+   <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-96200328-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<input type="button" class="printbutton" value="Save this data" id="pagePrint" onclick="print();">
+<body class="body"><a href=""><img class="logo" src="logo.png" alt="amibacelor logo"></a>
+<header class="mainHeader">
+    <nav><ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="active"><a href="selection.html">Calculation</a></li>
+        <li><a href="help.html">Help & Support</a></li>
+    </ul></nav>
+</header>
+<body>
+<div class="div"></div>
+<form class="form">
+
+    <p>Please enter name and related information to calculate.</p>
+
+    <input type="text" id="name1" placeholder="Name"> <input type="number" id="foodMon1" placeholder="Given For Food"> <input type="number" id="mea1" placeholder="Meal"> <input type="number" id="actualhouser1" placeholder="Actual house rent"> <input type="number" id="houser1" placeholder="House Rent given"> <br></br>
+
+    <input type="text" id="name2" placeholder="Name"> <input type="number" id="foodMon2" placeholder="Given For Food"> <input type="number" id="mea2" placeholder="Meal"> <input type="number" id="actualhouser2" placeholder="Actual house rent"> <input type="number" id="houser2" placeholder="House Rent given"> <br></br>
+
+    <input type="text" id="name3" placeholder="Name"> <input type="number" id="foodMon3" placeholder="Given For Food"> <input type="number" id="mea3" placeholder="Meal"> <input type="number" id="actualhouser3" placeholder="Actual house rent"> <input type="number" id="houser3" placeholder="House Rent given"> <br></br>
+
+    <input type="text" id="name4" placeholder="Name"> <input type="number" id="foodMon4" placeholder="Given For Food"> <input type="number" id="mea4" placeholder="Meal"> <input type="number" id="actualhouser4" placeholder="Actual house rent"> <input type="number" id="houser4" placeholder="House Rent given"> <br></br>
+
+    <input type="button" class="button" value="Submit" onclick="take_input();">
+ </form>
+  <div id="pdf2htmldiv">
+         <p id="printing_pera"></p>
+         <p id="printing_pera1"></p>
+         <p id="printing_pera2"></p>
+         <p id="printing_pera3"></p>
+         <p id="printing_pera4"></p>
+         <p id="printing_pera5"></p>
+  <table class="table">
+
+      <tr><th>Name.</th><th>For meal.</th><th>Meal no.</th><th>Meal Cost.</th><th>Meal money (Calc).</th><th>House Rent.</th><th>House rent given.</th><th>House rent (calc).</th><th>Final cost.</th></tr>
+
+    <tr><td><p id="bname1"></td><td><p id="bfoodMoney1"></td><td><p id="bmeal1"></td><td><p id="bperson1TotalMealCost"></td><td><p id="bperson1GiveTake"></td> <td><p id="bmainhouserent1"> </td> <td><p id="bPerson1HouseRent"></td><td><p id="bpayablefromhouser1"><p></td>
+    <td><p id="bPerson1FinalCalc"></p></td></tr>
+
+    <tr><td><p id="bname2"></td><td><p id="bfoodMoney2"></td><td><p id="bmeal2"></td><td><p id="bperson2TotalMealCost"></td><td><p id="bperson2GiveTake"></td> <td><p id="bmainhouserent2"></p></td> <td><p id="bPerson2HouseRent"></td><td><p id="bpayablefromhouser2"><p></td>
+    <td><p id="bPerson2FinalCalc"></p></td></tr>
+
+    <tr><td><p id="bname3"></td><td><p id="bfoodMoney3"></td><td><p id="bmeal3"></td><td><p id="bperson3TotalMealCost"></td><td><p id="bperson3GiveTake"></td> <td><p id="bmainhouserent3"> </td><td><p id="bPerson3HouseRent"></td><td><p id="bpayablefromhouser3"><p></td>
+    <td><p id="bPerson3FinalCalc"></p></td></tr>
+
+    <tr><td><p id="bname4"></td><td><p id="bfoodMoney4"></td><td><p id="bmeal4"></td><td><p id="bperson4TotalMealCost"></td><td><p id="bperson4GiveTake"></td> <td><p id="bmainhouserent4"> </td><td><p id="bPerson4HouseRent"></td><td><p id="bpayablefromhouser4"><p></td>
+    <td><p id="bPerson4FinalCalc"></p></td></tr>
+
+    
+</table>
+</div>
+<div class="divselectaion4"></div>
+<div class="devide"></div>
+<div class="footer"><footer>
+<nav class="makemiddlefooter">
+<nav class="footdec1">
+        <ul>
+<li><a class="afooter" href="help.html#babohar">ব্যবহার বিধি</a></li>
+        <li><a class="afooter" href="help.html#jogajog">যোগাযোগ</a></li>
+        <li><a class="afooter" href="help.html#somossa">সমস্যা মনে হল</a></li>
+        </ul>
+    </nav>
+<nav class="footdec2">
+        <ul>
+        <li><a class="afooter"href="about.html">amibachelor.com সম্পর্কে</a></li>
+        <li><a class="afooter"href="privacy.html">গোপনীয়তা ।</a><a class="afooter"href="terms.html"> নীতিমালা</a></li>
+        <li><a class="afooter"href="sitemap.html">সাইটম্যাপ</a></li>
+        </ul>
+    </nav>
+<nav class="footdec3">
+        <ul>
+        <li><a>সামাজিক যোগাযোগ মাধ্যম</a></li>
+        <a target="blank" href="https://www.fb.me/amibachelor"><img class="fblogo" src="logofb.png" alt="amibacelor fb logo"></a>
+        </ul>
+</footer></div>
+<script src="js/jspdf.js"></script>
+<script src="js/jquery-2.1.3.js"></script>
+<script src="js/pdfFromHTML.js"></script>
+<script src="js/jspdf.min.js"></script>
+<script type="text/javascript">
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('1i 1w(){1 D=4.6(\'D\').5;1 F=4.6(\'F\').5;1 s=4.6(\'s\').5;1 K=4.6(\'K\').5;b(D==""||F==""||s==""||K==""){a("1y n 9 p");c}1 m=(4.6("1u").5);1 f=(4.6("1z").5);1 i=(4.6("1r").5);1 j=(4.6("1t").5);b(m==""||f==""||i==""||j==""){a("1p: n 9 p");c}b(m<0||f<0||i<0||j<0){a("1p: n 9 1m E..");c}1 k=(4.6("1s").5);1 e=(4.6("1M").5);1 l=(4.6("1I").5);1 g=(4.6("1A").5);b(k==""||e==""||l==""||g==""){a("1J: n 9 p");c}b(k<0||e<0||l<0||g<0){a("1K: n 9 1m E.");c}1 B=(4.6("1L").5);1 w=(4.6("1H").5);1 x=(4.6("1G").5);1 y=(4.6("1C").5);b(B==""||w==""||x==""||y==""){a("C d: u 9 p.");c}b(B<0||w<0||x<0||y<0){a("C d: u 9 E.");c}1 O=(4.6("1B").5);1 Q=(4.6("1D").5);1 P=(4.6("1E").5);1 M=(4.6("1F").5);b(O==""||Q==""||P==""||M==""){a("C d: u 9 p.");c}b(O<0||Q<0||P<0||M<0){a("C d: u 9 E.");c}1 1q=7(m);1 1n=7(f);1 15=7(i);1 1a=7(j);1 19=7(k);1 1f=7(e);1 17=7(l);1 1d=7(g);1 z=7(B);1 G=7(w);1 H=7(x);1 N=7(y);1 X=1q+1n+15+1a;1 12=19+1f+17+1d;1 h=X/12;1 1e=z+G+H+N;1 Y=h*k;1 U=h*e;1 T=h*l;1 11=h*g;1 10=Y-m;1 S=U-f;1 Z=T-i;1 V=11-j;1 A=7(O);1 r=7(Q);1 J=7(P);1 L=7(M);1 v=A-z;1 t=r-G;1 I=J-H;1 R=L-N;1 1o=v+10;1 1h=t+S;1 1k=I+Z;1 1j=R+V;1 1g=A+r+J+L;1 18=v+t+I+R;1x.3="o 1v 14: "+X+" q";2d.3="o 16 2m: "+12+".";2n.3="2o 16 14 2p 2l 2k: "+h.8(2)+" q";2g.3="o 13 d: "+1g+" q";2f.3="o 13 d 1b: "+1e+" q";2h.3="o 13 d 2i 9 1b "+18+" q";2j.3=D;2q.3=m;1N.3=k;2r.3=Y.8(2);2A.3=10.8(2);2z.3=z;2B.3=1o.8(2);2C.3=v;2y.3=A;2x.3=F;2t.3=f;2s.3=e;2u.3=U.8(2);2v.3=S.8(2);2w.3=G;2e.3=1h.8(2);1W.3=t;1V.3=r;1X.3=s;1Y.3=i;1Z.3=l;1U.3=T.8(2);1T.3=Z.8(2);1P.3=H;1O.3=1k.8(2);1Q.3=I;1R.3=J;1S.3=K;20.3=j;21.3=g;29.3=11.8(2);2a.3=V.8(2);2b.3=N;2c.3=1j.8(2);28.3=R;27.3=L;1 W=4.1l(\'W\');W.23();4.1l(\'.22\').24=\'25\';1i 1c(){26.1c()}}',62,163,'|var||innerHTML|document|value|getElementById|parseFloat|toFixed|be|alert|if|return|rent|meal2|foodMoney2|meal4|mealCost|foodMoney3|foodMoney4|meal1|meal3|foodMoney1|cannot|Total|blank|tk|mainhouserent2|name3|payablefromhouser2|Cannot|payablefromhouser1|houseRent2|houseRent3|houseRent4|houseRent1con|mainhouserent1|houseRent1|House|name1|minus|name2|houseRent2con|houseRent3con|payablefromhouser3|mainhouserent3|name4|mainhouserent4|actualhouserent4|houseRent4con|actualhouserent1|actualhouserent3|actualhouserent2|payablefromhouser4|person2GiveTake|person3TotalMealCost|person2TotalMealCost|person4GiveTake|form|totalBazarCost|person1TotalMealCost|person3GiveTake|person1GiveTake|person4TotalMealCost|totalMealEaten|house|cost|foodMoneyCon3|meal|meal3con|totalPayablefromHouserent|meal1con|foodMoneyCon4|collected|print|meal4con|houseRentCollected|meal2con|houseRent|final2|function|final4|final3|querySelector|in|foodMoneyCon2|final1|Money|foodMoneyCon1|foodMon3|mea1|foodMon4|foodMon1|bazar|take_input|printing_pera|Name|foodMon2|mea4|actualhouser1|houser4|actualhouser2|actualhouser3|actualhouser4|houser3|houser2|mea3|Meal|Food|houser1|mea2|bmeal1|bPerson3FinalCalc|bPerson3HouseRent|bpayablefromhouser3|bmainhouserent3|bname4|bperson3GiveTake|bperson3TotalMealCost|bmainhouserent2|bpayablefromhouser2|bname3|bfoodMoney3|bmeal3|bfoodMoney4|bmeal4|table|remove|className|show|window|bmainhouserent4|bpayablefromhouser4|bperson4TotalMealCost|bperson4GiveTake|bPerson4HouseRent|bPerson4FinalCalc|printing_pera1|bPerson2FinalCalc|printing_pera4|printing_pera3|printing_pera5|will|bname1|month|this|no|printing_pera2|Per|for|bfoodMoney1|bperson1TotalMealCost|bmeal2|bfoodMoney2|bperson2TotalMealCost|bperson2GiveTake|bPerson2HouseRent|bname2|bmainhouserent1|bPerson1HouseRent|bperson1GiveTake|bPerson1FinalCalc|bpayablefromhouser1'.split('|'),0,{}))
+
+</script>
+</body>
+</html>
